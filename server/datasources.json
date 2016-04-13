@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "restDB": {
+    "url": "mongodb://paanoop:anoop123@ds023500.mlab.com:23500/rest-example",
+    "name": "restDB",
+    "connector": "mongodb"
+  }
+}

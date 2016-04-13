@@ -1,0 +1,54 @@
+{
+  "name": "investor",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "advindaSalesForceId": {
+      "type": "string"
+    },
+    "aum": {
+      "type": "string"
+    },
+    "bilingCity": {
+      "type": "string"
+    },
+    "billingCountry": {
+      "type": "string"
+    },
+    "billingStreet": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "subType": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "campaign": {
+      "type": "belongsTo",
+      "model": "campaign",
+      "foreignKey": "campaignId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

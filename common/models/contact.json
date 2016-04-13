@@ -1,0 +1,48 @@
+{
+  "name": "contact",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fax": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "salutation": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "id": false
+    },
+    "firstName": {
+      "type": "string",
+      "id": false
+    },
+    "lastName": {
+      "type": "string",
+      "id": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "campaign": {
+      "type": "belongsTo",
+      "model": "campaign",
+      "foreignKey": "campaignId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

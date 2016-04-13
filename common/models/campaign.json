@@ -1,0 +1,56 @@
+{
+  "name": "campaign",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "dueDate": {
+      "type": "date",
+      "required": true
+    },
+    "promisedInvestment": {
+      "type": "number",
+      "required": true
+    },
+    "investment": {
+      "type": "number",
+      "required": true
+    },
+    "adhoc": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contacts": {
+      "type": "hasMany",
+      "model": "contact",
+      "foreignKey": ""
+    },
+    "investors": {
+      "type": "hasMany",
+      "model": "investor",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
