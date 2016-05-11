@@ -14,22 +14,22 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "restDB"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "restDB",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "restDB",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "restDB",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "restDB",
     "public": false
   },
   "campaign": {
