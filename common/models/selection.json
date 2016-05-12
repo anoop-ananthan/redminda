@@ -1,5 +1,5 @@
 {
-  "name": "investor",
+  "name": "selection",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -7,27 +7,22 @@
     "validateUpsert": true
   },
   "properties": {
-    "advindaSalesForceId": {
+    "active": {
+      "type": "boolean",
+      "required": true
+    },
+    "aumTopList": {
       "type": "string"
     },
-    "aum": {
-      "type": "string"
+    "currencyId": {
+      "type": "number",
+      "required": true
     },
-    "subType": {
-      "type": "string"
-    },
-    "website": {
-      "type": "string"
-    },
-    "bilingCity": {
+    "region": {
       "type": "string",
       "required": true
     },
-    "billingCountry": {
-      "type": "string",
-      "required": true
-    },
-    "billingStreet": {
+    "investmentType": {
       "type": "string",
       "required": true
     },
@@ -39,12 +34,13 @@
       "type": "string",
       "required": true
     },
-    "phone": {
-      "type": "string",
-      "required": true
+    "validity": {
+      "type": "number",
+      "required": true,
+      "comments": "Validity in months"
     },
-    "postalCode": {
-      "type": "string",
+    "expiry": {
+      "type": "date",
       "required": true
     }
   },

@@ -10,39 +10,40 @@
     "fax": {
       "type": "string"
     },
-    "mobile": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "salutation": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
     "email": {
       "type": "string",
-      "id": false
+      "id": false,
+      "required": true
     },
     "firstName": {
       "type": "string",
-      "id": false
+      "id": false,
+      "required": true
     },
     "lastName": {
       "type": "string",
-      "id": false
+      "id": false,
+      "required": true
+    },
+    "mobile": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "salutation": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
-  "relations": {
-    "campaign": {
-      "type": "belongsTo",
-      "model": "campaign",
-      "foreignKey": "campaignId"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

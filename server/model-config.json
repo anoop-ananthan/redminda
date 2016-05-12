@@ -49,5 +49,41 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "group": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "license": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "selection": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "cost": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "currency": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "users": {
+    "dataSource": "restDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

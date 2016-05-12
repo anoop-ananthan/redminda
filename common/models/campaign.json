@@ -7,16 +7,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "description": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "startDate": {
       "type": "date",
       "required": true
@@ -36,34 +26,18 @@
     "adhoc": {
       "type": "boolean",
       "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
-  "relations": {
-    "contacts": {
-      "type": "hasMany",
-      "model": "contact",
-      "foreignKey": ""
-    },
-    "investors": {
-      "type": "hasMany",
-      "model": "investor",
-      "foreignKey": ""
-    }
-  },
-  "acls": [
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
+  "relations": {},
+  "acls": [],
   "methods": {}
 }
