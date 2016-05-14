@@ -20,6 +20,7 @@ angular.module('redminda')
                                         console.log(result);
                                         $scope.spinning = false;
                                         $scope.data = {};
+                                        $state.go('dashboard');
                                     }, function(error) {
                                         console.log(error);
                                         $scope.spinning = false;
@@ -41,6 +42,7 @@ angular.module('redminda')
                                         console.log(result);
                                         $scope.spinning = false;
                                         $scope.data = {};
+                                        $state.go('dashboard');
                                     }, function(error) {
                                         console.log(error);
                                         $scope.spinning = false;

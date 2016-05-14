@@ -17,5 +17,5 @@ angular
     )
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         console.log('> loading config');
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/dashboard');
     }]);
