@@ -40,10 +40,22 @@
     "title": {
       "type": "string",
       "required": false
+    },
+    "investorId": {
+      "type": "number",
+      "required": true,
+      "index": true,
+      "comments": "FK to investors"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "investor": {
+      "type": "belongsTo",
+      "model": "investor",
+      "foreignKey": "investorId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

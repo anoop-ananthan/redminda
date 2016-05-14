@@ -1,0 +1,26 @@
+{
+  "name": "rest-example",
+  "description": "A throwaway application to learn bootstrap-theming, nested views and routes and some good user friendly layouts.",
+  "main": "server/server.js",
+  "authors": [
+    "Anoop.P.A"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/paanoop/rest-example",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "font-awesome": "^4.6.2"
+  }
+}

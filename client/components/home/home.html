@@ -1,0 +1,149 @@
+<header class="home">
+    <div class="home-content">
+        <div class="home-content-inner">
+            <h1>Redminda Campaigner</h1>
+            <hr>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <p>
+                        This is a sample application to learn
+                        <ol style="text-align: left;">
+                            <li>Bootstrap Theme Integration</li>
+                            <li>Nested Routing</li>
+                            <li>Nested Views</li>
+                            <li>Resolve in State Routing</li>
+                            <li>Perfomance Optimization by Minification &amp; Bundling of Javascript files and CSS files</li>
+                            <li>Angular Animation <span class="text-muted">(Wishlist)</span> </li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+            <a data-toggle="modal" href='#signup' class="btn btn-success btn-lg">Sign Up</a>
+            <a data-toggle="modal" href='#login' class="btn btn-primary btn-lg">Login</a>
+        </div>
+    </div>
+</header>
+<!-- Signup -->
+<div class="modal fade" id="signup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Signup</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputFirstName" class="col-sm-3 control-label">First Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="FirstName" id="inputFirstName" class="form-control" required ng-model="data.firstName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName" class="col-sm-3 control-label">Last Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="lastName" id="inputLastName" class="form-control" required ng-model="data.lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="email" id="inputEmail" class="form-control" required ng-model="data.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label">Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" name="password" id="inputPassword" class="form-control" required ng-model="data.password">
+                        </div>
+                    </div>
+                </div>
+                <!-- /form -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="signup()" ng-disabled="spinning">Save
+                    <i class="fa fa-spinner fa-spin fa-pulse" ng-show="spinning"></i>
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" ng-disabled="spinning">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Signup -->
+<!-- Login -->
+<div class="modal fade" id="login">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="email" id="inputEmail" class="form-control" required ng-model="data.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label">Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" name="password" id="inputPassword" class="form-control" required ng-model="data.password">
+                        </div>
+                    </div>
+                </div>
+                <!-- /form -->
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="pull-left">Forgot Password</a>
+                <button type="button" class="btn btn-primary" ng-click="login()" ng-disabled="spinning">
+                    Login
+                    <i class="fa fa-spinner fa-spin fa-pulse" ng-show="spinning"></i>
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" ng-disabled="spinning">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Login -->
+<style>
+.home {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../../assets/img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.home .home-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+.home .home-content .home-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.home .home-content .home-content-inner hr {
+    margin: 30px auto;
+}
+
+.home .home-content .home-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .7);
+}
+</style>
