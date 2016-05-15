@@ -4,7 +4,7 @@
             <h1>Redminda Campaigner</h1>
             <hr>
             <div class="row">
-                <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                <div class="col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
                     <p>
                         This is a sample application to learn
                         <ol style="text-align: left;">
@@ -17,9 +17,33 @@
                         </ol>
                     </p>
                 </div>
+                <!-- /.col -->
+                <div class="col-xs-4  col-sm-4  col-md-4  col-lg-4">
+                    <p>
+                        Login | Signup
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                    <input type="text" name="username" id="inputEmail" class="form-control" required ng-model="data.credentials" placeholder="Email or Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                    <input type="password" name="password" id="inputPassword" class="form-control" required ng-model="data.password" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                    <a type="button" class="btn btn-primary" ng-click="login()" ng-disabled="logging">
+                        Login
+                        <i class="fa fa-spinner fa-spin fa-pulse" ng-show="logging"></i>
+                    </a>
+                    <a data-toggle="modal" data-target='#signup' ng-disabled="logging" class="btn btn-success">Sign Up</a>
+                </div>
             </div>
-            <a data-toggle="modal" href='#signup' class="btn btn-success btn-lg">Sign Up</a>
-            <a data-toggle="modal" href='#login' class="btn btn-primary btn-lg">Login</a>
+            <!-- /form -->
         </div>
     </div>
 </header>
@@ -52,38 +76,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword" class="col-sm-3 control-label">Password:</label>
+                        <label for="inputUsername" class="col-sm-3 control-label">Username:</label>
                         <div class="col-sm-9">
-                            <input type="password" name="password" id="inputPassword" class="form-control" required ng-model="data.password">
-                        </div>
-                    </div>
-                </div>
-                <!-- /form -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" ng-click="signup()" ng-disabled="spinning">Save
-                    <i class="fa fa-spinner fa-spin fa-pulse" ng-show="spinning"></i>
-                </button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" ng-disabled="spinning">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /Signup -->
-<!-- Login -->
-<div class="modal fade" id="login">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Login</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
-                        <div class="col-sm-9">
-                            <input type="text" name="email" id="inputEmail" class="form-control" required ng-model="data.email">
+                            <input type="text" name="username" id="inputUsername" class="form-control" required ng-model="data.username">
                         </div>
                     </div>
                     <div class="form-group">
@@ -96,9 +91,7 @@
                 <!-- /form -->
             </div>
             <div class="modal-footer">
-                <a href="#" class="pull-left">Forgot Password</a>
-                <button type="button" class="btn btn-primary" ng-click="login()" ng-disabled="spinning">
-                    Login
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="signup()" ng-disabled="spinning">Save
                     <i class="fa fa-spinner fa-spin fa-pulse" ng-show="spinning"></i>
                 </button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal" ng-disabled="spinning">Close</button>
@@ -106,7 +99,7 @@
         </div>
     </div>
 </div>
-<!-- /Login -->
+<!-- /.Signup -->
 <style>
 .home {
     position: relative;

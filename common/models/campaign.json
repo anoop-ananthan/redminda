@@ -37,7 +37,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "contacts": {
+      "type": "hasAndBelongsToMany",
+      "model": "contact",
+      "foreignKey": "contactId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
