@@ -3,7 +3,7 @@ angular.module('redminda')
         console.log('> loaded home.config');
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '',
                 views: {
                     home: {
                         templateUrl: 'components/home/home.html',
