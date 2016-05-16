@@ -62,6 +62,7 @@ angular.module('redminda')
                                 };
                             }
                         ]
+
                     }
                 }
             })
