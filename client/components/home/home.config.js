@@ -9,10 +9,7 @@ angular.module('redminda')
                         templateUrl: 'components/home/home.html',
                         controller: ['$scope', '$rootScope', '$state', 'Users',
                             function($scope, $rootScope, $state, Users) {
-                                $scope.data = {
-                                    credentials: 'idiot',
-                                    password: 'idiot@123'
-                                };
+                                $scope.data = {};
                                 $scope.logging = false;
                                 $scope.signing = false;
 
@@ -33,7 +30,6 @@ angular.module('redminda')
                                             console.log(result);
                                             $scope.logging = false;
                                             $scope.data = {};
-                                            // localStorage.user = result.user;
                                             $state.go('dashboard');
                                         }, function(error) {
                                             console.log(error);
