@@ -4,39 +4,55 @@ angular.module('redminda')
             .state('contact', {
                 url: '/contact',
                 templateUrl: 'components/_shared/template/main.html',
-                resolve: {
-                    dataset: ['Contact', function(Contact) {
-                        return Contact.find({
-                            filter: {
-                                order: 'firstName asc'
-                            }
-                        });
-                    }]
-                },
-                controller: ['$scope', '$state', 'dataset', 'Contact',
-                    function($scope, $state, dataset, Contact) {
-                        console.log('> loading dataset');
 
-                        $scope.dataset = dataset;
+                controller: ['$scope', '$state', '$window', 'Contact',
+                    function($scope, $state, $window, Contact) {
+                        $scope.title = 'Contact';
+                        $scope.icon = 'users';
+                        get();
 
-                        Contact.find({
-                            filter: {
-                                order: 'firstName asc'
-                            }
-                        }).$promise.then(function(result) {
-                            $scope.dataset = dataset;
-                        });
+                        function get() {
+                            Contact.find({
+                                filter: {
+                                    order: 'firstName asc'
+                                }
+                            }).$promise.then(function(result) {
+                                $scope.dataset = result;
+                            });
+                        };
 
                         $scope.save = function() {
                             Contact.upsert($scope.data).$promise.then(function(result) {
-                                console.log(result)
+                                get();
                             }, function(error) {
                                 console.log(error);
                             })
                         };
 
                         $scope.add = function() {
-                            $scope.data = {};
+                            $scope.data = {
+                                "fax": "123-345-6789",
+                                "email": "test@gmail.com",
+                                "firstName": "Rajendra",
+                                "lastName": "Prasad",
+                                "mobile": "908-907-0051",
+                                "phone": "0484-304-294",
+                                "salutation": "Mr.",
+                                "title": "Project Leader"
+                            };
+                        };
+
+                        $scope.delete = function() {
+                            if ($window.confirm("Are you sure to delete?")) {
+                                Contact
+                                    .remove($scope.data).$promise.then(function() {
+                                        get();
+                                    }, function(err) {
+                                        $state.go('error', {
+                                            err: err
+                                        });
+                                    })
+                            }
                         };
 
                         $scope.select = function(data) {

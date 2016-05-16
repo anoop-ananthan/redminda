@@ -4,10 +4,10 @@
 <!-- Additional details may be displayed below in the footer -->
 <!--  -->
 <form role="form" class="form-horizontal">
-    <legend> <i class="fa fa-{{icon}}"></i> {{title}}</legend>
+    <legend class="text-primary"> <i class="fa fa-{{icon}}"></i> {{title}}</legend>
     <div class="row">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <table class="table table-condensed table-hover">
+            <table class="table table-condensed table-hover table-bordered">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -40,7 +40,7 @@
                     <button type="button" class="btn btn-success" ng-click="save()">
                         <i class="fa fa-floppy-o"></i> Save
                     </button>
-                    <button type="button" class="btn btn-danger">
+                    <button type="button" class="btn btn-danger" ng-click="delete()">
                         <i class="fa fa-eraser"></i> Delete
                     </button>
                 </div>
