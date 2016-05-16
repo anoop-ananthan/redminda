@@ -13,36 +13,44 @@ angular.module('redminda')
                         });
                     }]
                 },
-                controller: ['$scope', '$state', 'dataset', function($scope, $state, dataset) {
-                    $scope.dataset = dataset;
-                }]
-            })
-            .state('contact.edit', {
-                url: '/edit',
-                params: {
-                    data: null
-                },
-                views: {
-                    '': {},
-                    'content': {
-                        templateUrl: 'components/contact/contact-form.html',
-                        controller: ['$scope', '$state', '$stateParams', function($scope, $state, $stateParams) {
-                            console.log($scope);
-                            $scope.data = $stateParams.data;
-                            $scope.save = function() {
-                                console.log($scope);
-                                Contact.upsert($scope.data).$promise.then(function(result) {
-                                    console.log(result)
-                                }, function(error) {
-                                    console.log(error);
-                                })
+                controller: ['$scope', '$state', 'dataset', 'Contact',
+                    function($scope, $state, dataset, Contact) {
+                        console.log('> loading dataset');
+
+                        $scope.dataset = dataset;
+
+                        Contact.find({
+                            filter: {
+                                order: 'firstName asc'
                             }
-                        }]
+                        }).$promise.then(function(result) {
+                            $scope.dataset = dataset;
+                        });
+
+                        $scope.save = function() {
+                            Contact.upsert($scope.data).$promise.then(function(result) {
+                                console.log(result)
+                            }, function(error) {
+                                console.log(error);
+                            })
+                        };
+
+                        $scope.add = function() {
+                            $scope.data = {};
+                        };
+
+                        $scope.select = function(data) {
+                            $scope.data = data;
+                        };
+                    }
+                ]
+            })
+            .state('contact.form', {
+                url: '/form',
+                views: {
+                    'content@contact': {
+                        templateUrl: 'components/contact/contact-form.html'
                     }
                 }
-
-            })
-            .state('contact.add', {})
-            .state('contact.campaign', {})
-            .state('contact.campaign.add', {});
+            });
     }]);
