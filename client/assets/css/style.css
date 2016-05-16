@@ -2,6 +2,10 @@ label {
     float: right;
 }
 
+body {
+    padding-top: 60px;
+}
+
 
 /* Custom Colored Panels */
 

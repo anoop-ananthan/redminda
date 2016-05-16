@@ -14,11 +14,10 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a ui-sref="#"><i class="fa fa-crosshairs fa-fw"></i> Campaign</a></li>
-                <li><a ui-sref="#"><i class="fa fa-users fa-fw"></i> Contact</a></li>
+                <li><a ui-sref="contact.form"><i class="fa fa-users fa-fw"></i> Contact</a></li>
                 <li><a ui-sref="#"><i class="fa fa-gift fa-fw"></i> Package</a></li>
                 <li><a ui-sref="#"><i class="fa fa-tasks fa-fw"></i> Task</a></li>
                 <li><a ui-sref="#"><i class="fa fa-cog fa-fw"></i> Settings</a></li>
-                <li><a ui-sref="#"><i class="fa fa-won"></i> Ra</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -102,7 +101,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{user.firstName}} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>

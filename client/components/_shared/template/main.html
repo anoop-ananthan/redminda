@@ -1,0 +1,52 @@
+<!-- This template is the main data entry form template -->
+<!-- It has a grid on the left-side-panel, -->
+<!-- content for data-entry and footer which has add, save and delete button -->
+<!-- Additional details may be displayed below in the footer -->
+<!--  -->
+<form role="form" class="form-horizontal">
+    <legend class="text-primary"> <i class="fa fa-{{icon}}"></i> {{title}}</legend>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <table class="table table-condensed table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in dataset" ng-click="select(d)">
+                        <td>{{$index+1}}</td>
+                        <td>{{d.firstName}}</td>
+                        <td>{{d.lastName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.grid -->
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ui-view="content">
+                </div>
+                <!-- /. content -->
+                <div class="row" ui-view="detail">
+                </div>
+                <!-- /. detail -->
+                <div class="row pull-right">
+                    <button type="button" class="btn btn-primary" ng-click="add()">
+                        <i class="fa fa-plus"></i> New
+                    </button>
+                    <button type="button" class="btn btn-success" ng-click="save()">
+                        <i class="fa fa-floppy-o"></i> Save
+                    </button>
+                    <button type="button" class="btn btn-danger" ng-click="delete()">
+                        <i class="fa fa-eraser"></i> Delete
+                    </button>
+                </div>
+                <!-- /. buttons -->
+            </div>
+        </div>
+        <!-- /.main -->
+    </div>
+</form>
