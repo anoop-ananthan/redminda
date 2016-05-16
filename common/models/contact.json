@@ -1,61 +1,61 @@
 {
-  "name": "contact",
-  "base": "PersistedModel",
-  "strict": false,
-  "idInjection": false,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
-    "fax": {
-      "type": "string"
+    "name": "contact",
+    "base": "PersistedModel",
+    "strict": false,
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
     },
-    "email": {
-      "type": "string",
-      "id": false,
-      "required": true
+    "properties": {
+        "fax": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "id": false,
+            "required": true
+        },
+        "firstName": {
+            "type": "string",
+            "id": false,
+            "required": true
+        },
+        "lastName": {
+            "type": "string",
+            "id": false,
+            "required": true
+        },
+        "mobile": {
+            "type": "string",
+            "required": true
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "salutation": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": false
+        },
+        "investorId": {
+            "type": "number",
+            "required": false,
+            "index": true,
+            "comments": "FK to investors"
+        }
     },
-    "firstName": {
-      "type": "string",
-      "id": false,
-      "required": true
+    "validations": [],
+    "relations": {
+        "campaigns": {
+            "type": "hasAndBelongsToMany",
+            "model": "campaign",
+            "foreignKey": "contactId"
+        }
     },
-    "lastName": {
-      "type": "string",
-      "id": false,
-      "required": true
-    },
-    "mobile": {
-      "type": "string",
-      "required": true
-    },
-    "phone": {
-      "type": "string",
-      "required": true
-    },
-    "salutation": {
-      "type": "string",
-      "required": true
-    },
-    "title": {
-      "type": "string",
-      "required": false
-    },
-    "investorId": {
-      "type": "number",
-      "required": false,
-      "index": true,
-      "comments": "FK to investors"
-    }
-  },
-  "validations": [],
-  "relations": {
-    "campaigns": {
-      "type": "hasAndBelongsToMany",
-      "model": "campaign",
-      "foreignKey": "contactId"
-    }
-  },
-  "acls": [],
-  "methods": {}
+    "acls": [],
+    "methods": {}
 }
