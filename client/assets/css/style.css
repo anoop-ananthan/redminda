@@ -2,6 +2,10 @@ label {
     float: right;
 }
 
+body {
+    padding-top: 60px;
+}
+
 
 /* Custom Colored Panels */
 
@@ -62,3 +66,6 @@ label {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
+
+
+/* My Custom CSS */

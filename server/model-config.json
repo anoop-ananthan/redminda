@@ -1,89 +1,90 @@
 {
-  "_meta": {
-    "sources": [
-      "loopback/common/models",
-      "loopback/server/models",
-      "../common/models",
-      "./models"
-    ],
-    "mixins": [
-      "loopback/common/mixins",
-      "loopback/server/mixins",
-      "../common/mixins",
-      "./mixins"
-    ]
-  },
-  "User": {
-    "dataSource": "restDB"
-  },
-  "AccessToken": {
-    "dataSource": "restDB",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "restDB",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "restDB",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "restDB",
-    "public": false
-  },
-  "campaign": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "contact": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "investor": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "group": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "license": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "selection": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "cost": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "currency": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "users": {
-    "dataSource": "restDB",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  }
+    "_meta": {
+        "sources": [
+            "loopback/common/models",
+            "loopback/server/models",
+            "../common/models",
+            "./models"
+        ],
+        "mixins": [
+            "loopback/common/mixins",
+            "loopback/server/mixins",
+            "../common/mixins",
+            "./mixins"
+        ]
+    },
+    "User": {
+        "public": false,
+        "dataSource": "db"
+    },
+    "AccessToken": {
+        "dataSource": "restDB",
+        "public": false
+    },
+    "ACL": {
+        "dataSource": "restDB",
+        "public": false
+    },
+    "RoleMapping": {
+        "dataSource": "restDB",
+        "public": false
+    },
+    "Role": {
+        "dataSource": "restDB",
+        "public": false
+    },
+    "campaign": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "contact": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "investor": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "group": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "license": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "selection": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "cost": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "currency": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    },
+    "users": {
+        "dataSource": "restDB",
+        "public": true,
+        "$promise": {},
+        "$resolved": true
+    }
 }
