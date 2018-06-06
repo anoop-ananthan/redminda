@@ -4,9 +4,9 @@ This is an application to learn advanced features of UI routing such as nested v
 
 **Use this application mainly to host sample REST API**
 
-[Sample Application](https://rest-sample.herokuapp.com/)
+[Sample Application](https://redminda.herokuapp.com/)
 
-[REST API Application](https://rest-sample.herokuapp.com/explorer/)
+[REST API Application](https://redminda.herokuapp.com/explorer/)
 
 ## Angular 1.5 features
 
@@ -29,4 +29,4 @@ This is an application to learn advanced features of UI routing such as nested v
 2. `npm start`
 
 ## Authorization sample
-1. `Currency` is configured to be accessed through autherized login.
+1. `Currency` is configured to be accessed through authorized login.
