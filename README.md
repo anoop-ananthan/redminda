@@ -28,3 +28,5 @@ This is an application to learn advanced features of UI routing such as nested v
 1. `npm install` this automatically installs bower dependency as well. If failed run `bower install`
 2. `npm start`
 
+## Authorization sample
+1. `Currency` is configured to be accessed through autherized login.
